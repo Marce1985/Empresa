@@ -7,8 +7,8 @@ namespace Persistencia
         IEnumerable<Persona> GetAllPersona();
         Persona AdPersona(Persona persona);
         Persona UpdatePersona(Persona persona);
-        void DeletePersona(id idPersona);
-        Persona GetPersona(id idPersona);
+        void DeletePersona(Id idPersona);
+        Persona GetPersona(Id idPersona);
          
     }
 }
