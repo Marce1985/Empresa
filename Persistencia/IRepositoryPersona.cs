@@ -1,14 +1,16 @@
 using Dominio;
 using  System.Collections.Generic;
+
 namespace Persistencia
 {
     public interface IRepositoryPersona
     {
+        IEnumerable<Persona> GetAll();
         IEnumerable<Persona> GetAllPersona();
-        Persona AdPersona(Persona persona);
+        Persona AddPersona(Persona persona);
         Persona UpdatePersona(Persona persona);
-        void DeletePersona(Id idPersona);
-        Persona GetPersona(Id idPersona);
+        void DeletePersona(int idPersona);
+        Persona GetPersona(int idPersona);
          
     }
 }
