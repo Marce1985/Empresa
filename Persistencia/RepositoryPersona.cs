@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Dominio;
+using Microsoft.EntityFrameworkCore;
 
 namespace Persistencia
 {
@@ -20,10 +21,8 @@ namespace Persistencia
          public RepositoryPersona(AplicationContext appContext){
              _appContext= appContext;
          }
-
-        public IEnumerable<Persona> GetAll(){
-            return personas;
-        }
+        public RepositoryPersona(){}
+       
         Persona IRepositoryPersona.AddPersona(Persona persona)
         {
             var personaAdicionada= _appContext.Personas.Add(persona);
@@ -42,7 +41,7 @@ namespace Persistencia
 
         IEnumerable<Persona> IRepositoryPersona.GetAllPersona()
         {
-            return _appContext.Personas;
+            return _appContext.Personas.AsNoTracking();
         }
 
         Persona IRepositoryPersona.GetPersona(int idPersona)

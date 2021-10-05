@@ -5,7 +5,7 @@ namespace Persistencia
 {
     public interface IRepositoryPersona
     {
-        IEnumerable<Persona> GetAll();
+       
         IEnumerable<Persona> GetAllPersona();
         Persona AddPersona(Persona persona);
         Persona UpdatePersona(Persona persona);
