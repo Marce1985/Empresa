@@ -1,0 +1,49 @@
+﻿@page
+@model MyApp.Namespace.EditModel
+@{
+}
+<h1>Editar Persona</h1>   
+
+
+<br>
+<br>
+<div>
+    
+    <div class= "row">
+  <form method="post" id="myForm">
+      <div class="form-group" id="myForm">
+          <label asp-for="Persona.id" class="control-label"></label>
+          <input asp-for="Persona.id" class="form-control" type="text"></input>
+      </div>
+      <div class="form-group" id="myForm">
+          <label asp-for="Persona.nombre" class="control-label"></label>
+          <input asp-for="Persona.nombre" class="form-control" type="text"></input>
+      </div>
+       <div class="form-group" id="myForm">
+          <label asp-for="Persona.edad" class="control-label"></label>
+          <input asp-for="Persona.edad" class="form-control" type="text"></input>
+      </div>
+       <div class="form-group" id="myForm">
+          <label asp-for="Persona.telefono" class="control-label"></label>
+          <input asp-for="Persona.telefono" class="form-control" type="text"></input>
+      </div>
+       <div class="form-group" id="myForm">
+          <label asp-for="Persona.direccion" class="control-label"></label>
+          <input asp-for="Persona.direccion" class="form-control" type="text"></input>
+      </div>
+      <div class="form-group">
+          
+          <input value="Editar" class="btn btn-outline-primary" type="submit"></input>
+          <a class="btn btn-outline-primary" asp-page="./List" >Back
+            <i class="fas fa-hiking"></i>
+          </a> 
+      </div>
+       
+      
+  </form>
+</div>
+    
+    
+</div>
+
+        

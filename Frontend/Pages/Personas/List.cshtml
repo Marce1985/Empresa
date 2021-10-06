@@ -2,7 +2,15 @@
 @model Frontend.Pages.ListModel
 @{
 }
-<h1>Listado Personas</h1>
+
+<h2>Listado Personas</h2>
+<br>
+<div>
+    <a class="btn btn-outline-primary" asp-page="./Create">Nuevo usuario
+    <i class="fas fa-user-plus"></i>
+    </a> 
+</div>
+<br>
 <table class="table">
     <tr>
             <td>Id</td>
@@ -10,6 +18,9 @@
             <td>Edad</td>
             <td>Telefono</td>
             <td>Direccion</td>
+            <td>Detalle</td>
+            <td>Editar</td>
+            <td>Borrar</td>
     </tr>
      @foreach (var persona in Model.Personas)
     {
@@ -19,6 +30,24 @@
             <td>@persona.edad</td>
             <td>@persona.telefono</td>
             <td>@persona.direccion</td>
+            <td>
+                <a class="btn btn-outline-primary" asp-page="./Details" asp-route-id="@persona.id">Info
+                <i class='fas fa-book-reader' style='font-size:16px'></i> 
+                </a> 
+
+            </td>
+             <td>
+                <a class="btn btn-outline-primary" asp-page="./Edit" asp-route-id="@persona.id">Edit
+                <i class='fas fa-brush' style='font-size:16px'></i> 
+                </a> 
+
+            </td>
+             <td>
+                <a class="btn btn-outline-primary" asp-page="./Delete" asp-route-id="@persona.id">Delete
+                <i class="fas fa-trash-alt" style="font-size:16px"></i> 
+                </a> 
+
+            </td>
         </tr> 
     }
 

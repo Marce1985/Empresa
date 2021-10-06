@@ -8,10 +8,10 @@ namespace Persistencia
 
         //Creacion de tablas
         public DbSet<Persona> Personas{ get; set;}
-        // public DbSet<Empleado> Empleados{ get; set;}
-        // public DbSet<Cliente> Clientes{ get; set;}
-        // public DbSet<Directivo> Directivos{ get; set;}
-        // public DbSet<Categoria> Categorias{ get; set;}
+        public DbSet<Empleado> Empleados{ get; set;}
+        public DbSet<Cliente> Clientes{ get; set;}
+        public DbSet<Directivo> Directivos{ get; set;}
+        public DbSet<Categoria> Categorias{ get; set;}
          public AplicationContext() { }
 
             public AplicationContext(DbContextOptions<AplicationContext> options)

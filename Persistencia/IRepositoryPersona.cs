@@ -9,8 +9,8 @@ namespace Persistencia
         IEnumerable<Persona> GetAllPersona();
         Persona AddPersona(Persona persona);
         Persona UpdatePersona(Persona persona);
-        void DeletePersona(int idPersona);
-        Persona GetPersona(int idPersona);
+        void DeletePersona(string idPersona);
+        Persona GetPersona(string idPersona);
          
     }
 }

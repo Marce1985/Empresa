@@ -27,10 +27,11 @@ namespace Persistencia
         {
             var personaAdicionada= _appContext.Personas.Add(persona);
             _appContext.SaveChanges();
+             
             return personaAdicionada.Entity;
         }
 
-        void IRepositoryPersona.DeletePersona(int idPersona)
+        void IRepositoryPersona.DeletePersona(string idPersona)
         {
             var personaEncontrada= _appContext.Personas.FirstOrDefault(p=> p.id.Equals(idPersona));
             if(personaEncontrada==null)
@@ -44,7 +45,7 @@ namespace Persistencia
             return _appContext.Personas.AsNoTracking();
         }
 
-        Persona IRepositoryPersona.GetPersona(int idPersona)
+        Persona IRepositoryPersona.GetPersona(string idPersona)
         {
             return _appContext.Personas.FirstOrDefault(p=> p.id.Equals(idPersona));
             
