@@ -4,6 +4,8 @@ namespace Dominio
     {
         public string id { get; set; }
         public float sueldo_bruto { get; set; }
+
+        public  string PersonaId{ get; set; }
         
     }
 }
